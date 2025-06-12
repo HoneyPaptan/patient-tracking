@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - PatientCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PatientCare</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="appointments.html" class="active">Appointments</a>
+                <a href="prescriptions.html">Prescriptions</a>
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="appointments-section">
+            <div class="container">
+                <div class="appointments-grid">
+                    <div class="booking-card">
+                        <h2>Book Appointment</h2>
+                        <form id="appointmentForm" class="appointment-form" onsubmit="return validateAppointmentForm(event)">
+                            <div class="form-group">
+                                <label for="doctor">Select Doctor</label>
+                                <select id="doctor" name="doctor" required>
+                                    <option value="">Choose a doctor</option>
+                                    <option value="1">Dr. John Smith - Cardiologist</option>
+                                    <option value="2">Dr. Sarah Johnson - Pediatrician</option>
+                                    <option value="3">Dr. Michael Brown - General Physician</option>
+                                </select>
+                                <span class="error-message" id="doctorError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appointmentDate">Appointment Date</label>
+                                <input type="date" id="appointmentDate" name="appointmentDate" required>
+                                <span class="error-message" id="dateError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appointmentTime">Preferred Time</label>
+                                <select id="appointmentTime" name="appointmentTime" required>
+                                    <option value="">Select time slot</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                </select>
+                                <span class="error-message" id="timeError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reason">Reason for Visit</label>
+                                <textarea id="reason" name="reason" rows="3" required></textarea>
+                                <span class="error-message" id="reasonError"></span>
+                            </div>
+
+                            <button type="submit" class="primary-btn full-width">Book Appointment</button>
+                        </form>
+                    </div>
+
+                    <div class="appointments-list">
+                        <h2>Your Appointments</h2>
+                        <div class="table-container">
+                            <table class="appointments-table">
+                                <thead>
+                                    <tr>
+                                        <th>Doctor</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dr. John Smith</td>
+                                        <td>2024-03-15</td>
+                                        <td>10:00 AM</td>
+                                        <td><span class="status-badge confirmed">Confirmed</span></td>
+                                        <td>
+                                            <button class="action-btn cancel">Cancel</button>
+                                            <button class="action-btn reschedule">Reschedule</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dr. Sarah Johnson</td>
+                                        <td>2024-03-20</td>
+                                        <td>02:00 PM</td>
+                                        <td><span class="status-badge pending">Pending</span></td>
+                                        <td>
+                                            <button class="action-btn cancel">Cancel</button>
+                                            <button class="action-btn reschedule">Reschedule</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PatientCare</h4>
+                    <p>Making healthcare management easier</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PatientCare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescriptions - PatientCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PatientCare</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="appointments.html">Appointments</a>
+                <a href="prescriptions.html" class="active">Prescriptions</a>
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="prescriptions-section">
+            <div class="container">
+                <h1>Your Prescriptions</h1>
+                
+                <div class="prescriptions-filters">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search prescriptions...">
+                    </div>
+                    <div class="filter-group">
+                        <select id="dateFilter">
+                            <option value="all">All Dates</option>
+                            <option value="recent">Last 30 Days</option>
+                            <option value="6months">Last 6 Months</option>
+                            <option value="year">Last Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="prescriptions-grid">
+                    <!-- Prescription Card 1 -->
+                    <div class="prescription-card">
+                        <div class="prescription-header">
+                            <h3>General Checkup Prescription</h3>
+                            <span class="prescription-date">March 15, 2024</span>
+                        </div>
+                        <div class="prescription-details">
+                            <p><strong>Doctor:</strong> Dr. Michael Brown</p>
+                            <p><strong>Diagnosis:</strong> Common Cold</p>
+                        </div>
+                        <div class="medications">
+                            <h4>Medications</h4>
+                            <ul>
+                                <li>
+                                    <span class="med-name">Paracetamol 500mg</span>
+                                    <span class="med-dosage">1 tablet twice daily</span>
+                                    <span class="med-duration">5 days</span>
+                                </li>
+                                <li>
+                                    <span class="med-name">Vitamin C 1000mg</span>
+                                    <span class="med-dosage">1 tablet daily</span>
+                                    <span class="med-duration">7 days</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="prescription-footer">
+                            <button class="secondary-btn">Download PDF</button>
+                            <button class="primary-btn">Request Refill</button>
+                        </div>
+                    </div>
+
+                    <!-- Prescription Card 2 -->
+                    <div class="prescription-card">
+                        <div class="prescription-header">
+                            <h3>Follow-up Consultation</h3>
+                            <span class="prescription-date">March 10, 2024</span>
+                        </div>
+                        <div class="prescription-details">
+                            <p><strong>Doctor:</strong> Dr. Sarah Johnson</p>
+                            <p><strong>Diagnosis:</strong> Seasonal Allergies</p>
+                        </div>
+                        <div class="medications">
+                            <h4>Medications</h4>
+                            <ul>
+                                <li>
+                                    <span class="med-name">Cetirizine 10mg</span>
+                                    <span class="med-dosage">1 tablet daily</span>
+                                    <span class="med-duration">14 days</span>
+                                </li>
+                                <li>
+                                    <span class="med-name">Nasal Spray</span>
+                                    <span class="med-dosage">2 sprays each nostril</span>
+                                    <span class="med-duration">10 days</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="prescription-footer">
+                            <button class="secondary-btn">Download PDF</button>
+                            <button class="primary-btn">Request Refill</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PatientCare</h4>
+                    <p>Making healthcare management easier</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PatientCare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
